@@ -29,7 +29,7 @@ public class PlayerConnectListener implements Listener
 		
 		plugin.displayAllPlayerForPlayer(player, false, true);
 		if(TabDeco.debugMode) {
-            TabDeco.debugLogger.info("Player " + player.getDisplayName() + " is logging in! Sending packets.");
+            TabDeco.debugLogger.info(new StringBuilder().append("Player ").append(player.getDisplayName()).append(" is logging in! Sending packets.").toString());
         }
 		ArrayList<String> lastTabData = new ArrayList<>();
 		for(int i = 0; i < this.plugin.tabData.size(); i++)
@@ -39,7 +39,7 @@ public class PlayerConnectListener implements Listener
 			plugin.sendSpecificPacketToPlayer(player, true, text.replaceAll("\\[\\@\\]", ""));
 			lastTabData.add(text);
 			if(TabDeco.debugMode) {
-                TabDeco.debugLogger.info("Sent packet with text: " + text);
+                TabDeco.debugLogger.info(new StringBuilder().append("Sent packet with text: ").append(text).toString());
             }
 		}
 		plugin.setPlayerData(player, "playerTabData", lastTabData);

@@ -21,7 +21,7 @@ public class PlayerKillDeathListener implements Listener
 	{
 		try
 		{
-			Player player = (Player)event.getEntity();
+			Player player = event.getEntity().getPlayer();
 			if(player != null)
 			{
 				FixedMetadataValue metadata = (FixedMetadataValue)TabDeco.getMetadata(player, "deathCounter", plugin);

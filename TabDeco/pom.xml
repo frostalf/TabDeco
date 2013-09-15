@@ -45,5 +45,11 @@
       <version>3.18.2</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.bergerkiller.bukkit</groupId>
+      <artifactId>BKCommonLib</artifactId>
+      <version>1.54-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 </project>
